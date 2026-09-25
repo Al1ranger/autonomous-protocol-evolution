@@ -138,7 +138,8 @@ class AutonomousProtocolEvolution(gl.Contract):
     def invite_member(self, protocol_id: str, member: str) -> None:
         if protocol_id not in self.protocols or gl.message.sender_address != self.protocols[protocol_id].owner:
             raise gl.vm.UserError("[EXPECTED] protocol owner required")
-        key = member_key(protocol_id, Address(member))
+        address = member if isinstance(member, Address) else Address(member)
+        key = member_key(protocol_id, address)
         if key in self.members:
             raise gl.vm.UserError("[EXPECTED] member already known")
         self.members[key] = "INVITED"
