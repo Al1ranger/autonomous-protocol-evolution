@@ -45,7 +45,7 @@ genlayer code <address>
 genlayer schema <address>
 ```
 
-Use immutable, content-addressed HTTPS URLs. The examples under `examples/specs` are deliberately simple: v2 is additive, while v3 removes required identity and timeout semantics. Compute SHA-256 of the exact bytes served by the pinned URL before registration or proposal. See `LIVE_PROOFS.md` for verified transactions, if present.
+Use immutable, content-addressed HTTPS URLs. The examples under `examples/specs` are deliberately simple: v2 is additive, while v3 removes required identity and timeout semantics. Compute SHA-256 of the exact bytes served by the pinned URL before registration or proposal. The [live proof matrix](LIVE_PROOFS.md) shows both onchain outcomes and the superseded test deployment.
 
 ## Security limits
 
